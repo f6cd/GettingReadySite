@@ -216,7 +216,7 @@ body {
 /*==========================================================================
     Media queries.
 */
-@media only screen and (max-width: 650px) {
+@media only screen and (max-width: 750px) {
     /*
         Collapse columns into rows when the screen isn't wide enough to properly display the layout.
         Also remove the margins between sections, so we can no longer see the background.
@@ -249,5 +249,9 @@ body {
 
     #menuButtonRow .flexColumn {
         padding: 4px 4px 4px 4px;
+    }
+
+    #pageContainer {
+        max-width: unset;
     }
   }
