@@ -1,0 +1,255 @@
+/*==========================================================================
+    Generic setup section.
+*/
+html,
+body {
+    /* width: 100%;
+    height: 100%; */
+    margin: 0px 0px 0px 0px;
+    padding: 0px 0px 0px 0px;
+}
+
+body {
+    font-family: Arial, Sans-Serif;
+
+    background-color: #0a3b7c;
+    background-image: url("/rsc/conservatives-blue.png");
+    background-blend-mode: overlay;
+    background-size: 8em;
+}
+
+/*==========================================================================
+    Flex layout classes.
+*/
+.flexRow {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.flexColumn {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 100%;
+    flex: 1;
+
+    padding: 8px 8px 8px 8px;
+
+    justify-content: center;
+}
+/*==========================================================================
+    Text helper classes.
+*/
+.centerText {
+    text-align: center;
+}
+
+/*==========================================================================
+    Top-level page containers.
+*/
+#pageContainer {
+    max-width: 700px;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 16px;
+    padding-bottom: 16px;
+}
+
+/*==========================================================================
+    Page sections generic.
+*/
+#sectionContainer {
+    padding: 32px 32px 32px 32px;
+    background-color: white;
+}
+
+.section {
+    border-bottom: 2px solid grey;
+    padding-top: 32px;
+    padding-bottom: 32px;
+}
+
+/*==========================================================================
+    Floating elements.
+*/
+.floatingElementBorder {
+    border-color: rgb(200, 200, 200);
+    border-style: solid;
+    border-width: 2px;
+}
+
+/*==========================================================================
+    Menu bar section.
+*/
+#menuFloaty {
+    margin-bottom: 8px;
+
+    background-color: white;
+}
+
+.menuButton {
+    text-align: center;
+    border: 1px grey solid;
+    font-weight: 600;
+    background-color: rgb(236, 236, 236);
+
+    padding-top: 7px;
+    padding-bottom: 5px;
+
+    color: black;
+    text-decoration: none;
+}
+
+.menuButtonSelected {
+    background-color: #028de6;
+}
+
+/*==========================================================================
+    News bar section.
+*/
+#newsFloaty {
+    background-color: #028de6;
+    color: white;
+
+    padding-top: 4px;
+    padding-bottom: 4px;
+
+    margin-bottom: 8px;
+}
+
+#newsFloaty #newsHeader {
+    text-align: center;
+    width: 100%;
+    margin: 0 0 0 0;
+}
+
+#newsFloaty #newsScroll {
+    margin: 0 0 0 0;
+}
+
+/*==========================================================================
+    Title text section.
+*/
+#titleSection #tinySubtitle {
+    font-size: 10px;
+    margin-top: 0px;
+}
+
+/*==========================================================================
+    About Gove section, with portrait.
+*/
+#govePainting {
+    margin: auto;
+
+    border-color: rgb(247, 194, 19);
+    border-style: groove;
+    border-width: 16px;
+
+    display: block;
+}
+
+#govePainting img {
+    display: block;
+}
+
+#govePainting #paintingTagline {
+    display: block;
+    margin: 0 0 0 0;
+
+    background-color: rgb(209, 164, 15);
+    color: wheat;
+
+    text-align: center;
+    font-size: 1em;
+
+    height: 20px;
+    padding-top: 2px;
+}
+
+#aboutText h2 {
+    text-align: left;
+}
+
+#aboutText p {
+    font-size: .95em;
+}
+
+/*==========================================================================
+    Donate section.
+*/
+#donateSection #donateButton {
+    text-align: center;
+    font-size: 2em;
+    width: 80%;
+    background-color: blue;
+    color: white;
+    text-decoration: none;
+    padding: 4px 4px 4px 4px;
+
+    border-style: groove;
+    border-width: 8px;
+    margin: auto;
+
+    transition: ease transform .03s;
+
+    display: block;
+}
+
+#donateSection #donateButton:hover {
+    transform: translateY(-4px);
+}
+
+#donateSection #donateButton:active {
+    transform: translateY(-2px);
+}
+
+/*==========================================================================
+    Footer section.
+*/
+#footer {
+    height: 100px;
+    text-align: center;
+    color:white;
+    background-color: black;
+    padding-top: 10px;
+}
+/*==========================================================================
+    Media queries.
+*/
+@media only screen and (max-width: 650px) {
+    /*
+        Collapse columns into rows when the screen isn't wide enough to properly display the layout.
+        Also remove the margins between sections, so we can no longer see the background.
+    */
+    .flexRow {
+      flex-direction: column;
+    }
+
+    #pageContainer {
+        padding-top: 0px;
+        padding-bottom: 0px;
+    }
+
+    #sectionContainer {
+        padding: 0 0 0 0;
+        margin: 0 0 0 0;
+    }
+
+    #menuFloaty {
+        margin-bottom: 0px;
+    }
+
+    #newsFloaty {
+        margin-bottom: 0px;
+    }
+
+    #aboutText h2 {
+        text-align: center;
+    }
+
+    #menuButtonRow .flexColumn {
+        padding: 4px 4px 4px 4px;
+    }
+  }
