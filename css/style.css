@@ -13,7 +13,7 @@ body {
     font-family: Arial, Sans-Serif;
 
     background-color: #0a3b7c;
-    background-image: url("/rsc/conservatives-blue.png");
+    background-image: url("../rsc/conservatives-blue.png");
     background-blend-mode: overlay;
     background-size: 8em;
 }
